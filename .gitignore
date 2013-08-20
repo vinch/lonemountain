@@ -1,4 +1,2 @@
 .DS_Store
-*.html
-*.css
-*.js
+node_modules
