@@ -12,14 +12,35 @@ html.no-js(lang='en')
   //<![endif]
   
   head
-    block title
+    title Lone Mountain Brewing Company • San Francisco, CA
     meta(charset='utf-8')
     meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
     meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
     != css('lonemountain')
-    script type="text/javascript" src="//use.typekit.net/gbm8snl.js"></script>
-    script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+    script(src='//use.typekit.net/gbm8snl.js')
+    script
+      try{Typekit.load();}catch(e){}
   
   body
     .layer
     img.logo(src='/img/logo.png')
+    .lonemountain
+      h2
+        strong Lone Mountain
+        span Brewing Company
+      h3 San Francisco, CA
+    .content
+      .legal.active
+        h3 Are you 21 or over?
+        .choice
+          a(href='#').yes Yes
+          a(href='http://www.caprisun.com', target='_blank').no No
+      .keepintouch
+        h3 We are currently brewing an amazing American Wheat!
+        h4 Register to the brewsletter to stay informed (so you can try it when it’s ready)
+        form(action="http://lonemountainbrewing.us4.list-manage.com/subscribe/post?u=8f79770d2f0be612ac8288831&amp;id=ba4cc6425f", method="post")
+          input(type="email", name="EMAIL")
+          button(type='submit') Register
+
+    script(src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js')
+    != js('lonemountain')

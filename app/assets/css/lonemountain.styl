@@ -1,6 +1,15 @@
 @import 'nib'
 
 black = #000
+white = #fff
+lightgray = #ccc
+red = #800000
+
+*
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+  -webkit-font-smoothing: antialiased
 
 html, body
   height: 100%
@@ -9,17 +18,119 @@ body
   background: url('/img/mountain.jpg') no-repeat center
   background-size: cover
   margin: 0
-  .layer
-    width: 100%
-    height: 100%
-    background: black
-    opacity: 0.5
-  img.logo
-    display: block
-    position: absolute
-    top: 50%
-    left: 50%
-    width: 250px
-    height: 250px
-    margin-top: -125px
-    margin-left: -125px
+  color: white
+  font-family: 'adelle-sans', sans-serif
+
+a
+  color: lightgray
+  text-decoration: none
+  border-bottom: 1px solid lightgray
+  &:hover
+    color: white
+    border: 0
+
+.layer
+  width: 100%
+  height: 100%
+  background: black
+  opacity: 0.6
+
+.logo
+  display: block
+  position: absolute
+  top: 40px
+  left: 40px
+  width: 200px
+  height: 173px
+  margin: 0
+  transition: left 0.5s, opacity 1s
+
+.lonemountain
+  position: absolute
+  top: 60px
+  left: 280px
+  height: 115px
+  h2
+    font-family: 'cubano-sharp', sans-serif
+    font-weight: normal
+    strong, span
+      line-height: 1em
+      display: block
+    strong
+      font-size: 50px
+      margin-bottom: 3px
+    span
+      font-size: 35px
+      margin-bottom: 5px
+  h3
+    font-size: 20px
+    font-weight: normal
+
+.content
+  position: absolute
+  top: 253px
+  border-top: 2px dashed rgba(255,255,255,0.2)
+  padding: 40px 0 0 280px
+  width: 100%
+  transition: top 0.5s, opacity 1s
+
+.legal,
+.keepintouch
+  position: absolute
+  top: 40px
+  left: 280px
+  opacity: 0
+  transition: opacity 0.5s
+  z-index: -1
+  &.active
+    opacity: 1
+    z-index: 50
+  h3
+    font-family: 'cubano-sharp', sans-serif
+    font-weight: normal
+    font-size: 30px
+    line-height: 1em
+
+.legal
+  h3
+    margin-bottom: 3px
+  .choice
+    clearfix()
+    a
+      display: block
+      float: left
+      font-family: 'cubano-sharp', sans-serif
+      font-weight: normal
+      font-size: 80px
+      line-height: 1em
+      margin-right: 15px
+
+.keepintouch
+  h3
+    margin-bottom: 5px
+  h4
+    font-weight: normal
+    font-size: 20px
+    line-height: 1em
+    margin-bottom: 20px
+  form
+    input, button
+      outline: none
+      font-family: 'adelle-sans', sans-serif
+    input
+      height: 35px
+      width: 300px
+      padding-left: 10px
+      font-size: 16px
+      border: 0
+    button
+      height: 35px
+      width: 100px
+      border: 0
+      background: red
+      color: white
+      font-size: 16px
+      font-weight: bold
+      cursor: pointer
+      &:hover
+        background: black
