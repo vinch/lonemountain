@@ -23,24 +23,25 @@ html.no-js(lang='en')
   
   body
     .layer
-    img.logo(src='/img/logo.png')
-    .lonemountain
-      h2
-        strong Lone Mountain
-        span Brewing Company
-      h3 San Francisco, CA
-    .content
-      .legal.active
-        h3 Are you 21 or over?
-        .choice
-          a(href='#').yes Yes
-          a(href='http://www.caprisun.com', target='_blank').no No
-      .keepintouch
-        h3 We are currently brewing an amazing American Wheat!
-        h4 Subscribe to the brewsletter to stay informed (so you can try it when it’s ready)
-        form(action="http://lonemountainbrewing.us4.list-manage.com/subscribe/post?u=8f79770d2f0be612ac8288831&amp;id=ba4cc6425f", method="post")
-          input(type="email", name="EMAIL")
-          button(type='submit') Subscribe
+    .container
+      img.logo(src='/img/logo.png')
+      .lonemountain
+        h2
+          strong Lone Mountain
+          span Brewing Company
+        h3 San Francisco, CA
+      .content
+        .legal.active
+          h3 Are you 21 or over?
+          .choice
+            a(href='#').yes Yes
+            a(href='http://www.caprisun.com', target='_blank').no No
+        .keepintouch
+          h3 We are currently brewing an amazing American Wheat!
+          h4 Subscribe to the brewsletter to stay informed (so you can try it when it’s ready)
+          form(action="http://lonemountainbrewing.us4.list-manage.com/subscribe/post?u=8f79770d2f0be612ac8288831&amp;id=ba4cc6425f", method="post")
+            input(type="email", name="EMAIL")
+            button(type='submit') Subscribe
 
     script(src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js')
     != js('lonemountain')
